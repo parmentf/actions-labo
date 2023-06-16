@@ -13,3 +13,5 @@ I think it depends the `on:` rule (which, in that case, was `push`).
 The
 [docker-publish](https://github.com/actions/starter-workflows/blob/main/ci/docker-publish.yml)
 workflow could be of some help later.
+
+The [actions/create-release](https://github.com/actions/create-release) is interesting too.
