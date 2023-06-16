@@ -24,3 +24,7 @@ The [actions/create-release](https://github.com/actions/create-release) is inter
 Installing [GitHub
 Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 extension may help.
+
+## Learn GitHub Actions
+
+Add a workflow in the `main` branch, as stated in Learn GitHub Actions / Understand GitHub Actions / [Create an example workflow](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions).
