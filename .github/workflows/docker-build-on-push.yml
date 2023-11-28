@@ -12,6 +12,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout from Git
+              uses: actions/checkout@v4
+
             - name: Docker Login
               uses: docker/login-action@v3
               with:
@@ -19,9 +22,7 @@ jobs:
                   password: ${{ secrets.DOCKER_PASSWORD }}
 
             - name: Build Docker Image
-              uses: docker/build-push-action@v5
-              with:
-                  context: ${{ github.workspace }}/../services/terms-teeft
-                  file: ${{ github.workspace }}/../services/terms-teeft/Dockerfile
-                  push: true
-                  tags: parmentf/teeft:latest
+              shell: bash
+              run: |
+                  docker build -t parmentf/teeft:latest services/terms-teeft
+                  docker push parmentf/teeft:latest
