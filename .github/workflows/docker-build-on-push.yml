@@ -21,6 +21,6 @@ jobs:
             - name: Build Docker Image
               uses: docker/build-push-action@v5
               with:
-                  context: services/terms-teeft
+                  context: ./services/terms-teeft
                   push: true
                   tags: parmentf/teeft:latest
