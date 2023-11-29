@@ -34,5 +34,6 @@ jobs:
             - name: Build & PushDocker Image
               shell: bash
               run: |
+                  echo "Building and pushing image for ${{ github.event.pull_request.head.ref }}, ${{ github.action_ref }}"
                   chmod +x ${{ github.workspace }}/.github/workflows/build-and-push.sh
                   ${{ github.workspace }}/.github/workflows/build-and-push.sh ${{ github.action_ref }}
