@@ -20,11 +20,17 @@ jobs:
             - name: Checkout from Git
               uses: actions/checkout@v4
 
-            - name: Set Git's username and email
-              shell: bash
-              run: |
-                  git config --global user.name "parmentf"
-                  git config --global user.email "francois.parmentier@gmail.com"
+            # - name: Set Git's username and email
+            #   shell: bash
+            #   run: |
+            #       git config --global user.name "parmentf"
+            #       git config --global user.email "francois.parmentier@gmail.com"
+
+            - name: Configure credentials for GitHub
+              uses: nodef/git-config.action@v1.0.0
+              with:
+                  credentials: |-
+                      github.com: ${{ github.token }}
 
             - name: Docker Login
               uses: docker/login-action@v3
