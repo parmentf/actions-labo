@@ -11,6 +11,9 @@ VERSION_TYPE=${VERSION_INTERMEDIATE%/*} # major, minor or patch
 
 echo "Building $VERSION_TYPE version of $SERVICE_NAME"
 
+echo "Remote repo : $GIT_REMOTE_REPO"
+echo "Remote repo2: $GIT_REMOTE_REPO2"
+
 if [ -d "services/$SERVICE_NAME" ]; then
     cd "services/$SERVICE_NAME"
     npm version "$VERSION_TYPE"
