@@ -4,7 +4,7 @@ set -euo pipefail
 
 # Branch name should be in the format:
 # <service>/<major|minor|patch>/<comment>
-BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+BRANCH_NAME=$1
 SERVICE_NAME=${BRANCH_NAME%%/*}
 VERSION_INTERMEDIATE=${BRANCH_NAME#*/}
 VERSION_TYPE=${VERSION_INTERMEDIATE%/*} # major, minor or patch
