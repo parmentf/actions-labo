@@ -23,8 +23,8 @@ jobs:
             - name: Set Git's username and email
               shell: bash
               run: |
-                  git config --global user.name "${{ github.actor }}"
-                  git config --global user.email "fake@example.com"
+                  git config --global user.name "parmentf"
+                  git config --global user.email "francois.parmentier@gmail.com"
 
             - name: Docker Login
               uses: docker/login-action@v3
