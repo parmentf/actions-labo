@@ -1,0 +1,33 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "teeft - Service d'extraction de termes",
+		"summary": "Propose des services d'extraction de termes dans des textes",
+		"version": "0.0.0",
+		"termsOfService": "https://services.istex.fr/",
+		"contact": {
+			"name": "Inist-CNRS",
+			"url": "https://www.inist.fr/nous-contacter/"
+		}
+	},
+	"servers": [
+		{
+			"x-comment": "Will be automatically completed by the ezs server."
+		},
+		{
+			"url": "http://vptdmservices.intra.inist.fr:??/",
+			"description": "Latest version for production",
+			"#DISABLED#x-profil": "Standard"
+		}
+	],
+	"tags": [
+		{
+			"name": "terms-extraction",
+			"description": "Services d'extraction de termes",
+			"externalDocs": {
+				"description": "Plus de documentation",
+				"url": "https://gitbucket.inist.fr/tdm/web-services/tree/master/terms-extraction"
+			}
+		}
+	]
+}
