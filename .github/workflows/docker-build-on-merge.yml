@@ -35,5 +35,4 @@ jobs:
               shell: bash
               run: |
                   echo "Building and pushing image for ${{ github.event.pull_request.head.ref }}"
-                  chmod +x ${{ github.workspace }}/.github/workflows/build-and-push.sh
                   ${{ github.workspace }}/.github/workflows/build-and-push.sh ${{ github.event.pull_request.head.ref }}
