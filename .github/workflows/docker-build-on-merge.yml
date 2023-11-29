@@ -34,7 +34,5 @@ jobs:
             - name: Build & PushDocker Image
               shell: bash
               run: |
-                  #   lodexdocker build -t parmentf/teeft:latest services/terms-teeft
-                  #   docker push parmentf/teeft:latest
                   chmod +x ${{ github.workspace }}/.github/workflows/build-and-push.sh
                   ${{ github.workspace }}/.github/workflows/build-and-push.sh
