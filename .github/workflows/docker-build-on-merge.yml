@@ -34,8 +34,7 @@ jobs:
             - name: Build & PushDocker Image
               shell: bash
               env:
-                  GIT_REMOTE_REPO: '${{ github.event.pull_request.head.repo.full_name }}'
-                  GIT_REMOTE_REPO2: 'https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git'
+                  GIT_REMOTE_REPO: 'https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}.git'
 
               run: |
                   git config --global user.name "github-actions[bot]"
