@@ -20,12 +20,6 @@ jobs:
             - name: Checkout from Git
               uses: actions/checkout@v4
 
-            # - name: Set Git's username and email
-            #   shell: bash
-            #   run: |
-            #       git config --global user.name "parmentf"
-            #       git config --global user.email "francois.parmentier@gmail.com"
-
             - name: Docker Login
               uses: docker/login-action@v3
               with:
@@ -37,13 +31,11 @@ jobs:
               with:
                   node-version: 20
 
-            - name: Configure credentials for Git
-              uses: kota65535/github-git-config-action@v1
-              with:
-                  github-token: ${{ github.token }}
-
             - name: Build & PushDocker Image
               shell: bash
               run: |
+                  git config --local user.name "github-actions[bot]"
+                  git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
                   echo "Building and pushing image for ${{ github.event.pull_request.head.ref }}"
                   ${{ github.workspace }}/.github/workflows/build-and-push.sh ${{ github.event.pull_request.head.ref }}
