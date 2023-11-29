@@ -35,4 +35,4 @@ jobs:
               shell: bash
               run: |
                   chmod +x ${{ github.workspace }}/.github/workflows/build-and-push.sh
-                  ${{ github.workspace }}/.github/workflows/build-and-push.sh
+                  ${{ github.workspace }}/.github/workflows/build-and-push.sh ${{ github.action_ref }}
