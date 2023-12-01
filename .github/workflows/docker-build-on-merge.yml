@@ -42,4 +42,4 @@ jobs:
                   git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
 
                   echo "Building and pushing image for ${{ github.event.pull_request.head.ref }}"
-                  ${{ github.workspace }}/.github/workflows/build-and-push.sh ${{ github.event.pull_request.head.ref }}
+                  bin/build-and-push.sh ${{ github.event.pull_request.head.ref }}
