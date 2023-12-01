@@ -28,10 +28,6 @@ jobs:
                   sudo dpkg -i hurl_4.1.0_amd64.deb
                   hurl --version
 
-            - name: Cache docker layers
-              uses: satackey/action-docker-layer-caching@v0.0.11
-              continue-on-error: true
-
             - name: Build Docker Image & Test
               shell: bash
               run: |
