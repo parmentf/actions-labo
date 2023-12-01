@@ -3,7 +3,7 @@
 	"info": {
 		"title": "teeft - Service d'extraction de termes",
 		"summary": "Propose des services d'extraction de termes dans des textes",
-		"version": "1.0.0",
+		"version": "1.1.0",
 		"termsOfService": "https://services.istex.fr/",
 		"contact": {
 			"name": "Inist-CNRS",
