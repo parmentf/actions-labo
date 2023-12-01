@@ -32,7 +32,7 @@ jobs:
               with:
                   node-version: 20
 
-            - name: Build & PushDocker Image
+            - name: Build & Push Docker Image
               shell: bash
               env:
                   GIT_REMOTE_REPO: 'https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}.git'
