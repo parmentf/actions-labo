@@ -1,4 +1,4 @@
-POST https://terms-extraction.services.istex.fr/v1/teeft/fr?indent=true
+POST {{host}}/v1/fr?indent=true
 content-type: application/json
 [
 	{
@@ -47,7 +47,7 @@ HTTP 200
     ]
 }]
 
-POST https://terms-extraction.services.istex.fr/v1/teeft/en?indent=true
+POST {{host}}/v1/en?indent=true
 content-type: application/json
 [
 	{
@@ -82,7 +82,7 @@ HTTP 200
     ]
 }]
 
-POST https://terms-extraction.services.istex.fr/v1/teeft/with-numbers/en?indent=true
+POST {{host}}/v1/with-numbers/en?indent=true
 content-type: application/json
 [
   {
@@ -115,7 +115,7 @@ HTTP 200
     ]
 }]
 
-POST https://terms-extraction.services.istex.fr/v1/teeft/with-numbers/fr?indent=true
+POST {{host}}/v1/with-numbers/fr?indent=true
 content-type: application/json
 [
   {
