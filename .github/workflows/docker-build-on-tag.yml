@@ -5,7 +5,7 @@ name: Docker Build & Push
 on:
     push:
         tags:
-            - '*@*'
+            - 'ws-*@*'
 
 jobs:
     build:
@@ -29,8 +29,5 @@ jobs:
             - name: Build & Push Docker Image
               shell: bash
               run: |
-                  # See https://stackoverflow.com/questions/63745613/how-to-get-a-branch-name-on-github-action-when-push-on-a-tag
-                  raw=$(git branch -r --contains ${{ github.ref }})
-                  branch=${raw/origin\/}
-                  echo "Building and pushing image for ${{ github.ref_name }} ($branch)"
-                  bin/build-and-push.sh $branch
+                  echo "Building and pushing image for ${{ github.ref_name }}"
+                  bin/build-and-push.sh ${{ github.ref_name }}
