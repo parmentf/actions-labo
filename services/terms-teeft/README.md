@@ -1,4 +1,4 @@
-# ws-terms-teeft@1.1.1
+# ws-terms-teeft@1.1.2
 
 Services d'extraction de termes dans des textes.
 
