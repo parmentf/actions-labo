@@ -8,7 +8,7 @@ wait_for_url () {
     return 0
 }
 
-# branche name should be in the format:
+# branch name should be in the format:
 # services/<service-name>/<comment>
 BRANCH_NAME=$1
 SERVICE_INTERMEDIATE=${BRANCH_NAME#services/} # remove services/ part
