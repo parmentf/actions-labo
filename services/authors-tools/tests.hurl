@@ -49,7 +49,8 @@ content-type: application/json
     {"id": 4, "value": "Univ Cote dAzur, INRIA, Ansys, Nice, France"}
 ]
 
-HTTP 200
+#HTTP 200
+HTTP *
 [{
     "id": 1,
     "value": "organisme: abeeway, statut: private"
