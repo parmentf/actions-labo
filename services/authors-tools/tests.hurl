@@ -43,26 +43,26 @@ HTTP 200
 POST {{host}}/v1/corporate/private-public?indent=true
 content-type: application/json
 [
-    {"id": "1", "value": "Abeeway, F-06903 Sophia Antipolis, France"},
-    {"id": "2", "value": "AiryLab SARL, 34 Rue Jean Baptiste Malon, F-04800 Greoux Les Bains, France"},
-    {"id": "3", "value": "4G TECHNOL, F-06370 Mouans Sartoux, France"},
-    {"id": "4", "value": "Univ Cote dAzur, INRIA, Ansys, Nice, France"}
+    {"id": 1, "value": "Abeeway, F-06903 Sophia Antipolis, France"},
+    {"id": 2, "value": "AiryLab SARL, 34 Rue Jean Baptiste Malon, F-04800 Greoux Les Bains, France"},
+    {"id": 3, "value": "4G TECHNOL, F-06370 Mouans Sartoux, France"},
+    {"id": 4, "value": "Univ Cote dAzur, INRIA, Ansys, Nice, France"}
 ]
 
 HTTP 200
 [{
-    "id": "1",
+    "id": 1,
     "value": "organisme: abeeway, statut: private"
 },
 {
-    "id": "2",
+    "id": 2,
     "value": "organisme: airylab sarl, statut: private"
 },
 {
-    "id": "3",
+    "id": 3,
     "value": "organisme: 4g technol, statut: Informations manquantes"
 },
 {
-    "id": "4",
+    "id": 4,
     "value": "organisme: univ cote dazur, statut: public"
 }]
