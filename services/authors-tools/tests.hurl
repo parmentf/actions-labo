@@ -40,30 +40,32 @@ HTTP 200
     "value": "male"
 }]
 
-POST {{host}}/v1/corporate/private-public?indent=true
-content-type: application/json
-[
-    {"id": 1, "value": "Abeeway, F-06903 Sophia Antipolis, France"},
-    {"id": 2, "value": "AiryLab SARL, 34 Rue Jean Baptiste Malon, F-04800 Greoux Les Bains, France"},
-    {"id": 3, "value": "4G TECHNOL, F-06370 Mouans Sartoux, France"},
-    {"id": 4, "value": "Univ Cote dAzur, INRIA, Ansys, Nice, France"}
-]
+# The following query can only work from the Inist's network, as it needs a file stored on a local machine
+# FIXME: Include the file in the image using DVC
 
+#POST {{host}}/v1/corporate/private-public?indent=true
+#content-type: application/json
+#[
+#    {"id": 1, "value": "Abeeway, F-06903 Sophia Antipolis, France"},
+#    {"id": 2, "value": "AiryLab SARL, 34 Rue Jean Baptiste Malon, F-04800 Greoux Les Bains, France"},
+#    {"id": 3, "value": "4G TECHNOL, F-06370 Mouans Sartoux, France"},
+#    {"id": 4, "value": "Univ Cote dAzur, INRIA, Ansys, Nice, France"}
+#]
+#
 #HTTP 200
-HTTP *
-[{
-    "id": 1,
-    "value": "organisme: abeeway, statut: private"
-},
-{
-    "id": 2,
-    "value": "organisme: airylab sarl, statut: private"
-},
-{
-    "id": 3,
-    "value": "organisme: 4g technol, statut: Informations manquantes"
-},
-{
-    "id": 4,
-    "value": "organisme: univ cote dazur, statut: public"
-}]
+#[{
+#    "id": 1,
+#    "value": "organisme: abeeway, statut: private"
+#},
+#{
+#    "id": 2,
+#    "value": "organisme: airylab sarl, statut: private"
+#},
+#{
+#    "id": 3,
+#    "value": "organisme: 4g technol, statut: Informations manquantes"
+#},
+#{
+#    "id": 4,
+#    "value": "organisme: univ cote dazur, statut: public"
+#}]

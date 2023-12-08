@@ -97,17 +97,34 @@ Exemple d'url en modifiant les paramètres `nameDepth` et `worksDepth` :
 
 Ce web-service renvoie le genre d'un prénom.
 
-Il prend en entrée du JSON avec deux champs, `id` et `value`, et renvoie un JSON avec le genre du prénom dans le champ `value`.
+Il prend en entrée du JSON avec deux champs, `id` et `value`, et renvoie un JSON
+avec le genre du prénom dans le champ `value`.
 
 #### Données de v1/first-name/gender
 
-Le fichier `nam_dict_merged.txt` est la fusion de deux fichiers venant de sources différentes :
+Le fichier `nam_dict_merged.txt` est la fusion de deux fichiers venant de
+sources différentes :
 
-- `nam_dict.txt` vient de données de la librairie [`gender_guesser`](<https://github.com/lead-ratings/gender-guesser/tree/master/gender_guesser/data>). Ces données sont sous licence GNU.
-- `national_names.csv` vient de la base de données [`Kaggle`](https://www.kaggle.com/datasets/haezer/french-baby-names?select=national_names.csv) et contient tous les prénoms français données depuis 1900. Ce fichier a été pré-traité pour correspondre à la structure du `nam_dict.txt`. On le retrouve ainsi dans le fichier `nam_dict_merged.txt` à partir de la ligne 48822.
+- `nam_dict.txt` vient de données de la librairie
+  [`gender_guesser`](<https://github.com/lead-ratings/gender-guesser/tree/master/gender_guesser/data>).
+  Ces données sont sous licence GNU.
+- `national_names.csv` vient de la base de données
+  [`Kaggle`](https://www.kaggle.com/datasets/haezer/french-baby-names?select=national_names.csv)
+  et contient tous les prénoms français données depuis 1900. Ce fichier a été
+  pré-traité pour correspondre à la structure du `nam_dict.txt`. On le retrouve
+  ainsi dans le fichier `nam_dict_merged.txt` à partir de la ligne 48822.
 
-Le fichier `preprocessing.py` permet de créer le `name_gender.pickle` qui contient des couples {"prénom":"genre"}.
-Enfin le fichier `gender.py` permet de renvoyer le genre d'un prénom en gérant les différentes types de prénoms. Il renvoie le genre si le prénom est trouvé, un "unknown" si le prénom n'est pas dans la base et une "erreur" si le prénom n'a pas le format attendu par le web-service.
+Le fichier `preprocessing.py` permet de créer le `name_gender.pickle` qui
+contient des couples `{"prénom":"genre"}`.  
+Enfin le fichier `gender.py` permet de renvoyer le genre d'un prénom en gérant
+les différentes types de prénoms. Il renvoie le genre si le prénom est trouvé,
+un "unknown" si le prénom n'est pas dans la base et une "erreur" si le prénom
+n'a pas le format attendu par le web-service.  
+
+> **NOTE**: pour le moment le fichier `affiliations-tools-corporate.json` est
+> stocké sur un serveur interne à l'Inist, ce qui casse le test de cette route
+> depuis GitHub.  Il faudra utiliser un remote DVC pour récupérer le fichier à
+> la construction de l'image Docker.
 
 #### Exemple de v1/first-name/gender
 
