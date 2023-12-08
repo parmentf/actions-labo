@@ -1,0 +1,37 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "authors-tools - Outils sur les auteurs",
+		"summary": "Cette instance propose des outils pour traiter les auteurs.",
+		"version": "0.0.0",
+		"termsOfService": "https://services.istex.fr/",
+		"contact": {
+			"name": "Inist-CNRS",
+			"url": "https://www.inist.fr/nous-contacter/"
+		}
+	},
+	"servers": [
+		{
+			"x-comment": "Will be automatically completed by the ezs server."
+		},
+		{
+			"url": "http://vptdmservices.intra.inist.fr:49229/",
+			"description": "Latest version for production",
+			"#DISABLED#x-profil": "Standard"
+		},
+		{
+			"url": "http://vitdmservices.intra.inist.fr:49230/",
+			"description": "only for personal or local usage"
+		}
+	],
+	"tags": [
+		{
+			"name": "authors-tools",
+			"description": "Outils sur les auteurs",
+			"externalDocs": {
+				"description": "Plus de documentation",
+				"url": "https://gitbucket.inist.fr/tdm/web-services/tree/master/authors-tools"
+			}
+		}
+	]
+}
