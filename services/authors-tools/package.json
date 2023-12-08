@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "ws-authors-tools",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Traitements des auteurs",
     "repository": {
         "type": "git",
